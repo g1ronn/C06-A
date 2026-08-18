@@ -13,7 +13,7 @@ public class Cantina {
 
     public void mostrarInfo(){
         System.out.println("Salgados da Cantina: ");
-        for (Salgado salgados : salgado){  //foreach eh usado para apenas ler 
+        for (Salgado salgados : salgado){  //foreach eh usado para apenas ler pois nao tem indice
             if (salgados != null){
                 System.out.println("Salgados: " + salgados.nome);
             }
