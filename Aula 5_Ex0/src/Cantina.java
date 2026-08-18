@@ -4,8 +4,8 @@ public class Cantina {
 
     public void addSalgado(Salgado novoSalgado){
         for(int i = 0; i < salgado.length; i++){
-            if(salgado[i] == null){  //
-                salgado [i] = novoSalgado; //
+            if(salgado[i] == null){  //o for normal eh usado para ler e modificar algo dentro do for
+                salgado [i] = novoSalgado; 
                 break;
             }
         }
@@ -13,7 +13,7 @@ public class Cantina {
 
     public void mostrarInfo(){
         System.out.println("Salgados da Cantina: ");
-        for (Salgado salgados : salgado){
+        for (Salgado salgados : salgado){  //foreach eh usado para apenas ler 
             if (salgados != null){
                 System.out.println("Salgados: " + salgados.nome);
             }
