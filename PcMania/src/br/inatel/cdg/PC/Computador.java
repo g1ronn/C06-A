@@ -6,16 +6,20 @@ import br.inatel.cdg.Pessoa.Cliente;
 
 public class Computador {
     private String marca;
-    private String preco;
+    private float preco;
     private SistemaOperacional sistema;
     private HardwareBasico[] hardware; 
     private MemoriaUSB memoriaUSB;
     private Cliente[] compra;
 
-    public Computador(){
+   public Computador(String marca, float preco, SistemaOperacional sistema, HardwareBasico[] hardware) {
+        this.marca = marca;
+        this.preco = preco;
+        this.sistema = sistema;
         this.hardware = new HardwareBasico[3];
-        this.memoriaUSB = new MemoriaUSB();
-        this.compra = new Cliente[10];
+        this.hardware[0] = hardware[0];
+        this.hardware[1] = hardware[1];
+        this.hardware[2] = hardware[2];
     }
 
     public void mostraPCConfigs(){
@@ -29,12 +33,13 @@ public class Computador {
 
     public void addMemoriaUSB(MemoriaUSB memoriaUSB){
         System.out.println("Adicionando memória USB");
+        this.memoriaUSB = memoriaUSB;
     }
 
     public String getMarca() {
         return marca;
     }
-    public String getPreco() {
+    public float getPreco() {
         return preco;
     }
     public SistemaOperacional getSistema() {
